@@ -20,3 +20,12 @@ class PageObject(BasePage):
         book_price_text = book_price.text
         book_price_small_text = book_price_small.text
         assert book_price_text  == book_price_small_text, "not promo price"
+  
+    def check_success_message_not_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), "success message is presented, but should not be"    
+
+    def check_success_message_disappeared(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), "success message is not disappeared" 
+
+
+
