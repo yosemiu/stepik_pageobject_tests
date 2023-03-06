@@ -9,7 +9,7 @@ def test_guest_can_go_to_login_page(browser):
  # открываем страницу
     page.open()                      
  # выполняем метод страницы — переходим на страницу логина
-    page.go_to_login_page()
+    page.go_to_login_page()      
 
 def test_guest_should_see_login_link(browser):
     link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
@@ -30,3 +30,9 @@ def test_login_n_refister_forms(browser):
     page = LoginPage(browser, link)
     page.open()
     page.should_be_register_form()  
+
+def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/ru/accounts/login/"
+    page = LoginPage(browser, link)
+    page.open()
+    page. доаписать имя метода
